@@ -36,7 +36,7 @@ var myLineChart = new Chart(ctx, {
     datasets: [{
       label: "C°",
       lineTension: 0.3,
-      backgroundColor: "rgba(78, 115, 223, 0.05)",
+      backgroundColor: "rgba(255, 0, 0, 0.1)",
       borderColor: "#e74a3b)",
       pointRadius: 3,
       pointBackgroundColor: "#e74a3b",
