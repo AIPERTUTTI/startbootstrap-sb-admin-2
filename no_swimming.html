@@ -242,7 +242,7 @@
           </div>
           <div class="card mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-black">Valori inquinamento registrati</h6>
+              <h6 class="m-0 font-weight-bold text-black">Spiagge a rischio</h6>
             </div>
             <div class="card-body">
               <div class="mb-1 small">Microplastiche</div>
@@ -318,22 +318,29 @@
       //JS for the map
         var latlng = L.latLng(42.311703, 11.597507);
       
-        var map = L.map('mapid').setView([42.311703, 11.597507], 9);
+        var map = L.map('mapid').setView([41.842337, 12.399764], 8);
       
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
           attribution: '&copy; <a href="https://www.openstreetmap.org/copyright"></a>'
         }).addTo(map);
-        
-        var circle = L.circle([42.311703, 11.597507], {
+        var circle1 = L.circle([41.245893, 13.624536],{
           
-    radius: 5000,
+          radius: 2350,
+          color: 'red',
+          fillColor: '#f03',
+          fillOpacity: 0.5
+      }).addTo(map);
+      var marker = L.marker([41.99774, 11.97913]).addTo(map);
+              marker.bindPopup("<b>Hack4Sea</b>").openPopup();
+        
+        var circle = L.circle([41.440852, 12.626054], {
+          
+    radius: 2350,
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5
 }).addTo(map);
-circle.bindPopup("<b>Pulizia Prioritaria</b> ");
-var marker = L.marker([41.99774, 11.97913]).addTo(map);
-        marker.bindPopup("<b>Hack4Sea</b>").openPopup();
+
 
         $(function () {
   $('[data-toggle="tooltip"]').tooltip()
